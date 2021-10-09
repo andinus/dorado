@@ -1,5 +1,5 @@
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-                             CG ALGORITHMS
+                                 DORADO
                Collection of Algorithms used in Computer
                                 Graphics
 
@@ -14,11 +14,11 @@ Development
 License
 
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
- Website          <https://andinus.nand.sh/CG-Algorithms>
- Source           <https://git.tilde.institute/andinus/cg-algorithms>
- GitHub (mirror)  <https://github.com/andinus/cg-algorithms>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ Website          <https://andinus.nand.sh/dorado>
+ Source           <https://git.unfla.me/dorado>
+ GitHub (mirror)  <https://github.com/andinus/dorado>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 Development
@@ -44,7 +44,7 @@ License
 ═══════
 
   ┌────
-  │ CG Algorithms - Collection of Algorithms used in Computer Graphics
+  │ Dorado - Collection of Algorithms used in Computer Graphics
   │ Copyright (C) 2021, Andinus <andinus@nand.sh>
   │
   │ This program is free software: you can redistribute it and/or modify

@@ -24,7 +24,7 @@ npm run build # Build for deployment.
 * License
 
 #+begin_src
-CG Algorithms - Collection of Algorithms used in Computer Graphics
+Dorado - Collection of Algorithms used in Computer Graphics
 Copyright (C) 2021, Andinus <andinus@nand.sh>
 
 This program is free software: you can redistribute it and/or modify
