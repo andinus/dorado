@@ -1,11 +1,25 @@
+<script>
+  import { createEventDispatcher } from 'svelte';
+
+  import Home from './Home.svelte'
+  import DDA from './algorithms/line-drawing/DDA.svelte'
+  import Bresenham from './algorithms/line-drawing/Bresenham.svelte'
+
+  const dispatch = createEventDispatcher();
+
+  const pageHome = () => {dispatch('message', { page: Home });}
+  const pageDDA = () => {dispatch('message', { page: DDA });}
+  const pageBresenham = () => {dispatch('message', { page: Bresenham });}
+</script>
+
 <nav class="ddmenu">
-  <a href="#">Home</a>
+  <button on:click={pageHome}>Home</button>
 
   <div class="ddgroup">
     Line Drawing Algorithms
     <div class="ddsub">
-      <a href="#">DDA</a>
-      <a href="#">Bresenham</a>
+      <button on:click={pageDDA}>DDA</button>
+      <button on:click={pageBresenham}>Bresenham</button>
     </div>
   </div>
 </nav>
@@ -13,7 +27,8 @@
 <style>
   .ddmenu { display: flex; }
 
-  .ddmenu a, .ddmenu .ddgroup {
+  .ddmenu button, .ddmenu .ddgroup {
+    text-align: left;
     width: 100%;
     padding: 15px;
     color: var(--fg-main);
@@ -21,7 +36,7 @@
     background: var(--bg-alt);
     border: 2px solid var(--bg-main);
   }
-  .ddmenu a:hover, .ddmenu .ddgroup:hover {
+  .ddmenu button:hover, .ddmenu .ddgroup:hover {
     color: var(--fg-special-cold);
     background: var(--bg-dim);
     cursor: pointer;
@@ -33,7 +48,7 @@
     top: 100%; left: 0;
     display: none;
   }
-  .ddsub a {
+  .ddsub button {
     display: block;
     box-sizing: border-box;
   }
