@@ -1,0 +1,39 @@
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                             CG ALGORITHMS
+               Collection of Algorithms used in Computer
+                                Graphics
+
+                                Andinus
+           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+Development
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ Website          <https://andinus.nand.sh/CG-Algorithms>
+ Source           <https://git.tilde.institute/andinus/cg-algorithms>
+ GitHub (mirror)  <https://github.com/andinus/cg-algorithms>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Development
+═══════════
+
+  The project is written in [Svelte].
+
+  ┌────
+  │ # Clone the project.
+  │ git clone https://git.tilde.institute/andinus/cg-algorithms
+  │ cd cg-algorithms
+  │
+  │ npm install # Get dependencies.
+  │ npm run dev # Build for development.
+  │ npm run build # Build for deployment.
+  └────
+
+
+[Svelte] <https://svelte.dev>
