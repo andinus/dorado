@@ -98,13 +98,31 @@ a:visited:hover, a:visited:focus {
   background-color: var(--cyan-subtle-bg);
 }
 
-form, input {
+form, input, button {
   color: var(--fg-main);
   background-color: var(--bg-main);
   margin: .25em;
   padding: .25em;
+
 }
 
-input {
+input, button {
   border: 2px solid var(--bg-alt);
 }
+
+code {
+    font-size: 1rem; /* code size should be same as body */
+    padding: 0 0.4ch;
+    color: var(--fg-special-calm);
+    background-color: var(--bg-alt);
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1em;
+    border-collapse: collapse;
+}
+tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
+    background-color: var(--bg-dim);
+}
+td, th { padding: .25em .5em; border: 1px solid var(--bg-alt); }
