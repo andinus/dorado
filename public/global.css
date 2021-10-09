@@ -1,0 +1,98 @@
+/* Colors from Modus theme. **************************************************/
+/* Stylesheets used on https://andinus.unfla.me ******************************/
+:root {
+    --bg-main: #ffffff;
+    --bg-dim: #f8f8f8;
+    --bg-alt: #f0f0f0;
+
+    --blue-subtle-bg: #b5d0ff;
+    --cyan-subtle-bg: #c0efff;
+    --bg-hl-alt-intense: #e8dfd1;
+
+    --fg-main: #000000;
+    --fg-dim: #282828;
+    --fg-alt: #505050;
+
+    --fg-special-cold: #093060;
+    --fg-special-mild: #184034;
+    --fg-special-warm: #5d3026;
+    --fg-special-calm: #61284f;
+
+    --red: #a60000;
+    --green: #005e00;
+    --yellow: #813e00;
+    --blue: #0031a9;
+    --magenta: #721045;
+    --cyan: #00538b;
+
+    --blue-alt-other: #0000c0;
+    --yellow-nuanced-fg: #3f3000;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-main: #000000;
+        --bg-dim: #100f10; /* #110b11 */
+        --bg-alt: #191a1b; /* #181a20 */
+
+        --blue-subtle-bg: #10387c;
+        --cyan-subtle-bg: #00415e;
+        --bg-hl-alt-intense: #282e46;
+
+        --fg-main: #ffffff;
+        --fg-dim: #e0e6f0;
+        --fg-alt: #a8a8a8;
+
+        --fg-special-cold: #c6eaff;
+        --fg-special-mild: #bfebe0;
+        --fg-special-warm: #f8dec0;
+        --fg-special-calm: #fbd6f4;
+
+        --red: #ff8059;
+        --green: #44bc44;
+        --yellow: #eecc00;
+        --blue: #2fafff;
+        --magenta: #feacd0;
+        --cyan: #00d3d0;
+
+        --blue-alt-other: #00bcff;
+        --yellow-nuanced-fg: #dfdfb0;
+
+    }
+}
+
+::selection { background-color: var(--bg-hl-alt-intense); }
+
+html {
+    color: var(--fg-main);
+    background-color: var(--bg-main);
+    font-family: "Iosevka Aile", sans-serif;
+}
+
+body {
+    margin: 2ch;
+    line-height: 1.5;
+}
+
+h1 { color: var(--fg); }
+h2 { color: var(--fg-special-warm); }
+h3 { color: var(--fg-special-cold); }
+h4 { color: var(--fg-special-mild); }
+h5 { color: var(--fg-special-calm); }
+h6 { color: var(--yellow-nuanced-fg); }
+h1, h2, h3, h4, h5, h6, .title { font-family: "Iosevka Etoile", serif; }
+.title {
+    color: var(--fg-special-cold);
+    border-bottom: 1px solid var(--bg-alt);
+}
+
+a { color: var(--blue-alt-other); }
+a:hover, a:focus {
+    color: var(--fg-dim);
+    background-color: var(--blue-subtle-bg);
+}
+
+a:visited { color: var(--cyan); }
+a:visited:hover, a:visited:focus {
+    color: var(--fg-dim);
+    background-color: var(--cyan-subtle-bg);
+}
