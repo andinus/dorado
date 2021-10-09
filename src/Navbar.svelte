@@ -7,19 +7,21 @@
 
   const dispatch = createEventDispatcher();
 
-  const pageHome = () => {dispatch('message', { page: Home });}
-  const pageDDA = () => {dispatch('message', { page: DDA });}
-  const pageBresenham = () => {dispatch('message', { page: Bresenham });}
+  const changePage = (p) => dispatch('message', { page: p });
 </script>
 
 <nav class="ddmenu">
-  <button on:click={pageHome}>Home</button>
+  <button on:click={() => changePage(Home)}>Home</button>
 
   <div class="ddgroup">
     Line Drawing Algorithms
     <div class="ddsub">
-      <button on:click={pageDDA}>Digital differential analyzer</button>
-      <button on:click={pageBresenham}>Bresenham</button>
+      <button on:click={() => changePage(DDA)}>
+        Digital differential analyzer
+      </button>
+      <button on:click={() => changePage(Bresenham)}>
+        Bresenham
+      </button>
     </div>
   </div>
 </nav>
