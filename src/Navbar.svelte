@@ -1,9 +1,9 @@
 <script>
   import { createEventDispatcher } from 'svelte';
 
-  import Home from './Home.svelte'
-  import DDA from './algorithms/line-drawing/DDA.svelte'
-  import Bresenham from './algorithms/line-drawing/Bresenham.svelte'
+  import Home from './Home.svelte';
+  import DDA from './algorithms/line-drawing/DDA.svelte';
+  import Bresenham from './algorithms/line-drawing/Bresenham.svelte';
 
   const dispatch = createEventDispatcher();
 
@@ -18,19 +18,23 @@
   <div class="ddgroup">
     Line Drawing Algorithms
     <div class="ddsub">
-      <button on:click={pageDDA}>DDA</button>
+      <button on:click={pageDDA}>Digital differential analyzer</button>
       <button on:click={pageBresenham}>Bresenham</button>
     </div>
   </div>
 </nav>
 
 <style>
-  .ddmenu { display: flex; }
+  .ddmenu {
+    display: flex;
+    padding: 0.2em;
+    border-bottom: 1px solid var(--bg-alt);
+  }
 
   .ddmenu button, .ddmenu .ddgroup {
     text-align: left;
     width: 100%;
-    padding: 15px;
+    padding: 8px;
     color: var(--fg-main);
     text-decoration: none;
     background: var(--bg-alt);
@@ -56,7 +60,7 @@
   .ddgroup::after {
     content: "\27A4";
     position: absolute;
-    top: 13px; right: 10px;
+    top: 8px; right: 8px;
     transition: transform 0.2s;
   }
   .ddgroup:hover::after {

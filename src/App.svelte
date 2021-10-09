@@ -1,8 +1,9 @@
 <script>
-  import Navbar from './Navbar.svelte'
-  import Home from './Home.svelte'
+  import Navbar from './Navbar.svelte';
+  import Home from './Home.svelte';
 
-  let page = Home
+  import DDA from './algorithms/line-drawing/DDA.svelte';
+  let page = DDA;
   const changePage = event => page = event.detail.page;
 </script>
 
