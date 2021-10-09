@@ -126,3 +126,8 @@ tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
     background-color: var(--bg-dim);
 }
 td, th { padding: .25em .5em; border: 1px solid var(--bg-alt); }
+
+.note {
+    background-color: var(--cyan-subtle-bg);
+    padding: 0 0.4ch;
+}
