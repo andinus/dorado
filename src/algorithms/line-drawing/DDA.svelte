@@ -124,7 +124,6 @@
 
   <h3>Graph</h3>
   {#if plotlyReady === false}
-
     <p class="note">
       Cannot plot graph: Plotly is not ready.
     </p>
