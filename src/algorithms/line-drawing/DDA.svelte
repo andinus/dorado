@@ -1,5 +1,5 @@
 <svelte:head>
-  <script src="../../resources/js/plotly/plotly.min.js" on:load={plotlyLoaded}></script>
+  <script src="./plotly/plotly.min.js" on:load={plotlyLoaded}></script>
 </svelte:head>
 <script>
   let solved = false;
@@ -118,7 +118,6 @@
       </tbody>
     </table>
   </details>
-
 
   {#if plotlyReady === false}
     <p class="note">

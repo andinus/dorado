@@ -85,7 +85,13 @@ h1, h2, h3, h4, h5, h6, .title { font-family: "Iosevka Etoile", serif; }
   color: var(--fg-special-cold);
   border-bottom: 1px solid var(--bg-alt);
 }
-
+.subtitle {
+    font-size: 0.56em;
+    font-style: italic;
+    font-weight: normal;
+    color: var(--fg-special-mild);
+}
+#org-div-home-and-up { float: right; padding-top: 1ch; }
 a { color: var(--blue-alt-other); }
 a:hover, a:focus {
   color: var(--fg-dim);
@@ -130,4 +136,8 @@ td, th { padding: .25em .5em; border: 1px solid var(--bg-alt); }
 .note {
     background-color: var(--cyan-subtle-bg);
     padding: 0 0.4ch;
+}
+#postamble {
+    margin-top: 1.6em;
+    border-top: 0.1em solid var(--fg-special-cold);
 }
