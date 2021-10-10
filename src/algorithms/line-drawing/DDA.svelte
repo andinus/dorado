@@ -119,13 +119,14 @@
     </table>
   </details>
 
+  <h3>Graph</h3>
   {#if plotlyReady === false}
+    {alert("Cannot plot graph: Plotly is not ready. Try again.")}
     <p class="note">
       Cannot plot graph: Plotly is not ready.
     </p>
   {/if}
 {/if}
-
 <div id="algoChart"></div>
 
 <style>
