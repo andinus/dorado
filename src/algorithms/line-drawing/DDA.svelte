@@ -5,7 +5,10 @@
   let solved = false;
 
   let plotlyReady = false;
-  const plotlyLoaded = () => plotlyReady = true;
+  const plotlyLoaded = () => {
+    plotlyReady = true;
+    dda();
+  }
 
   let x0 = 0, y0 = 0, x1 = 4, y1 = 4;
   let dx, dy;
@@ -121,7 +124,7 @@
 
   <h3>Graph</h3>
   {#if plotlyReady === false}
-    {alert("Cannot plot graph: Plotly is not ready. Try again.")}
+
     <p class="note">
       Cannot plot graph: Plotly is not ready.
     </p>
