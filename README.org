@@ -9,6 +9,8 @@
 | Source          | https://git.unfla.me/dorado       |
 | GitHub (mirror) | https://github.com/andinus/dorado |
 
+This is a continuation of [[https://andinus.unfla.me/projects/line-drawing.html][line-drawing.html]].
+
 * Installation
 
 The project is written in [[https://svelte.dev][Svelte]].
