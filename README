@@ -10,26 +10,31 @@
 Table of Contents
 ─────────────────
 
+Installation
 Development
 License
 
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ Demo     <https://andinus.unfla.me/dorado>
+ Website  <https://andinus.unfla.me/projects/dorado>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
- Website          <https://andinus.nand.sh/dorado>
  Source           <https://git.unfla.me/dorado>
  GitHub (mirror)  <https://github.com/andinus/dorado>
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-Development
-═══════════
+Installation
+════════════
 
   The project is written in [Svelte].
 
   ┌────
   │ # Clone the project.
-  │ git clone https://git.tilde.institute/andinus/cg-algorithms
-  │ cd cg-algorithms
+  │ git clone https://git.tilde.institute/andinus/dorado
+  │ cd dorado
   │
   │ npm install # Get dependencies.
   │ npm run dev # Build for development.
@@ -38,6 +43,22 @@ Development
 
 
 [Svelte] <https://svelte.dev>
+
+
+Development
+═══════════
+
+  • `src/App.svelte': Main application.
+  • `src/Home.svelte': Home page.
+  • `src/Navbar.svelte': Navbar (links to all algorithms).
+  • `src/algorithms': Algorithms directory.
+
+
+Adding a new Algorithm
+──────────────────────
+
+  To add a new algorithm, create a file in `src/algorithms' and add the
+  entry to `src/Navbar.svelte'.
 
 
 License

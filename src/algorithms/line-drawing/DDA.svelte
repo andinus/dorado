@@ -1,5 +1,5 @@
 <svelte:head>
-  <script src="https://andinus.unfla.me/resources/js/plotly/plotly.min.js" on:load={plotlyLoaded}></script>
+  <script src="../../resources/js/plotly/plotly.min.js" on:load={plotlyLoaded}></script>
 </svelte:head>
 <script>
   let solved = false;

@@ -1,0 +1,56 @@
+{
+  "_from": "plotly.js-dist-min",
+  "_id": "plotly.js-dist-min@2.4.2",
+  "_inBundle": false,
+  "_integrity": "sha512-+XfI7kHZ5Tu3lAy8TLCrN0Ltz78XG/cjF/pA2TfQn11PleMDIHu6e14DwY2Rn51WFP3/xVpfzDWCAGLN/Kp7GQ==",
+  "_location": "/plotly.js-dist-min",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "plotly.js-dist-min",
+    "name": "plotly.js-dist-min",
+    "escapedName": "plotly.js-dist-min",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/plotly.js-dist-min/-/plotly.js-dist-min-2.4.2.tgz",
+  "_shasum": "675a1d6d4828f7d9326926c05386a5e4231ee4b3",
+  "_spec": "plotly.js-dist-min",
+  "_where": "/home/andinus/projects/website/static/scripts",
+  "author": {
+    "name": "Plotly, Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/plotly/plotly.js/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Ready-to-use minified plotly.js distributed bundle.",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "plotly.min.js"
+  ],
+  "homepage": "https://github.com/plotly/plotly.js#readme",
+  "keywords": [
+    "graphing",
+    "plotting",
+    "data",
+    "visualization",
+    "plotly"
+  ],
+  "license": "MIT",
+  "main": "plotly.min.js",
+  "name": "plotly.js-dist-min",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plotly/plotly.js.git"
+  },
+  "version": "2.4.2"
+}
