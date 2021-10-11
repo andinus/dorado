@@ -1,5 +1,5 @@
 {
-    "name": "CG-Algorithms",
+    "name": "Dorado",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -18,6 +18,7 @@
         "svelte": "^3.0.0"
     },
     "dependencies": {
+        "plotly.js-basic-dist-min": "^2.5.1",
         "sirv-cli": "^1.0.0"
     }
 }

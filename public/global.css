@@ -70,9 +70,11 @@ html {
 
 body {
   max-width: 96ch;
-  margin: auto;
+  margin: 2ch;
   line-height: 1.5;
 }
+@media only screen and (min-width: 600px) { body { margin: 3.2ch; } }
+@media only screen and (min-width: 84ch) { body { margin: 4ch auto; } }
 
 h1 { color: var(--fg); }
 h2 { color: var(--fg-special-warm); }
@@ -111,7 +113,7 @@ form, input, button {
   padding: .25em;
 
 }
-
+input { max-width: 8ch; }
 input, button {
   border: 2px solid var(--bg-alt);
 }

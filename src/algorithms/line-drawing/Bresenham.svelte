@@ -1,15 +1,8 @@
-<svelte:head>
-  <script src="./plotly/plotly.min.js" on:load={plotlyLoaded}></script>
-</svelte:head>
 <script>
-  let solved = false;
-  let invalidInput = false;
+  import { onMount } from "svelte";
+  import Plotly from "plotly.js-basic-dist-min";
 
-  let plotlyReady = false;
-  const plotlyLoaded = () => {
-    plotlyReady = true;
-    solve();
-  }
+  let invalidInput = false;
 
   let x0 = 0, y0 = 0, x1 = 4, y1 = 4;
   let dx, dy, step;
@@ -39,36 +32,37 @@
     y_axis = [y0,];
 
     for (let idx = 0; idx < dx; idx++) {
-        // x_axis.at(-1) doesn't work for some reason.
-        x_axis.push(x_axis[x_axis.length - 1] + 1);
-        if (p < 0) {
-            y_axis.push(y_axis[y_axis.length - 1]);
-            p += 2 * dy;
-        } else {
-            y_axis.push(y_axis[y_axis.length - 1] + 1);
-            p += step;
-        }
+      // x_axis.at(-1) doesn't work for some reason.
+      x_axis.push(x_axis[x_axis.length - 1] + 1);
+      if (p < 0) {
+        y_axis.push(y_axis[y_axis.length - 1]);
+        p += 2 * dy;
+      } else {
+        y_axis.push(y_axis[y_axis.length - 1] + 1);
+        p += step;
+      }
       p_vals.push(p);
     }
 
     // Plot the chart.
-    if (plotlyReady)
-      Plotly.newPlot('algoChart', [{
-        x: x_axis,
-        y: y_axis,
-        type: 'lines',
-        name: 'Bresenham'
-      }]);
-
-    solved = true;
+    Plotly.newPlot('algoChart', [{
+      x: x_axis,
+      y: y_axis,
+      type: 'lines',
+      name: 'Bresenham'
+    }]);
   }
+
+  onMount(() => {
+    solve();
+  });
 </script>
 
 <h2>Bresenham</h2>
 <form class="points">
   {#if invalidInput === true}
     <p class="note">
-      Slope must be between 0 to 1.
+      Invalid Input: Slope must be between 0 to 1.
     </p>
   {/if}
   <label for="x0">x0: </label>
@@ -84,75 +78,70 @@
   <button type="button" on:click={solve}>Solve</button>
 </form>
 
-{#if solved === true}
-  <hr>
-  <h3>Solution</h3>
+<hr>
+<h3>Solution</h3>
 
+{#if invalidInput === true}
+  <p class="note">
+    Inavlid Input: Slope must be between 0 to 1.
+  </p>
+{/if}
+
+<table>
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>dx = <code>|x1 - x0|</code></td>
+      <td>{dx}</td>
+    </tr>
+    <tr>
+      <td>dy = <code>|y1 - y0|</code></td>
+      <td>{dy}</td>
+    </tr>
+    <tr>
+      <td>step = <code>|2 * (dy - dx)|</code></td>
+      <td>{step}</td>
+    </tr>
+    <tr>
+      <td><code>2 * dy</code></td>
+      <td>{2 * dy}</td>
+    </tr>
+  </tbody>
+</table>
+
+<details>
+  <summary>
+    Table
+  </summary>
   <table>
     <thead>
       <tr>
-        <th>&nbsp;</th>
-        <th>Value</th>
+        <th>Iteration (k)</th>
+        <th>P<sub>k</sub></th>
+        <th>x<sub>k + 1</sub></th>
+        <th>y<sub>k + 1</sub></th>
       </tr>
     </thead>
+
     <tbody>
+      {#each x_axis as _, i}
         <tr>
-          <td>dx = <code>|x1 - x0|</code></td>
-          <td>{dx}</td>
+          <td>{i}</td>
+          <td>{p_vals[i]}</td>
+          <td>{x_axis[i]}</td>
+          <td>{y_axis[i]}</td>
         </tr>
-        <tr>
-          <td>dy = <code>|y1 - y0|</code></td>
-          <td>{dy}</td>
-        </tr>
-        <tr>
-          <td>step = <code>|2 * (dy - dx)|</code></td>
-          <td>{step}</td>
-        </tr>
-        <tr>
-          <td><code>2 * dy</code></td>
-          <td>{2 * dy}</td>
-        </tr>
-        <tr>
-          <td>p<sub>0</sub></td>
-          <td>{p_vals[0]}</td>
-        </tr>
+      {/each}
     </tbody>
   </table>
+</details>
 
-  <details>
-    <summary>
-      Table
-    </summary>
-    <table>
-      <thead>
-        <tr>
-          <th>Iteration (k)</th>
-          <th>P<sub>k</sub></th>
-          <th>x<sub>k + 1</sub></th>
-          <th>y<sub>k + 1</sub></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        {#each x_axis as _, i}
-          <tr>
-            <td>{i}</td>
-            <td>{p_vals[i]}</td>
-            <td>{x_axis[i]}</td>
-            <td>{y_axis[i]}</td>
-          </tr>
-        {/each}
-      </tbody>
-    </table>
-  </details>
-
-  <h3>Graph</h3>
-  {#if plotlyReady === false}
-    <p class="note">
-      Cannot plot graph: Plotly is not ready.
-    </p>
-  {/if}
-{/if}
+<h3>Graph</h3>
 <div id="algoChart"></div>
 
 <style>
