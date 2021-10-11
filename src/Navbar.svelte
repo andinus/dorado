@@ -4,9 +4,9 @@
   import Home from './Home.svelte';
   import DDA from './algorithms/line-drawing/DDA.svelte';
   import Bresenham from './algorithms/line-drawing/Bresenham.svelte';
+  import Scaling from './algorithms/2d-transformations/Scaling.svelte';
 
   const dispatch = createEventDispatcher();
-
   const changePage = (p) => dispatch('message', { page: p });
 </script>
 
@@ -18,6 +18,18 @@
     <div class="ddsub">
       <button on:click={() => changePage(DDA)}>
         Digital differential analyzer
+      </button>
+      <button on:click={() => changePage(Bresenham)}>
+        Bresenham
+      </button>
+    </div>
+  </div>
+
+  <div class="ddgroup">
+    2 Dimensional Transformations
+    <div class="ddsub">
+      <button on:click={() => changePage(Scaling)}>
+        Scaling
       </button>
       <button on:click={() => changePage(Bresenham)}>
         Bresenham
@@ -73,6 +85,9 @@
     .ddsub {
       position: static;
       margin-top: 10px;
+    }
+    .ddmenu button, .ddmenu .ddgroup {
+      padding: 12px;
     }
   }
 </style>
