@@ -3,8 +3,8 @@
 #+export_file_name: index
 #+setupfile: ~/.emacs.d/org-templates/projects.org
 
-| Demo    | https://andinus.unfla.me/dorado          |
-| Website | https://andinus.unfla.me/projects/dorado |
+| Application | https://andinus.unfla.me/dorado          |
+| Website     | https://andinus.unfla.me/projects/dorado |
 
 | Source          | https://git.unfla.me/dorado       |
 | GitHub (mirror) | https://github.com/andinus/dorado |
