@@ -31,8 +31,8 @@
       <button on:click={() => changePage(Scaling)}>
         Scaling
       </button>
-      <button on:click={() => changePage(Bresenham)}>
-        Bresenham
+      <button on:click={() => alert("Not Implemented.")}>
+        Translation
       </button>
     </div>
   </div>
