@@ -7,3 +7,9 @@
   Checkout my other
   <a href="https://andinus.unfla.me/projects">projects</a>.
 </p>
+<p>
+  Inspired by Karishma's work:
+  <a href="https://karishmarajput.github.io/cg-algo">
+    karishmarajput.github.io/cg-algo
+  </a>.
+</p>

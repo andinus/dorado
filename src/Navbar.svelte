@@ -5,6 +5,7 @@
   import DDA from './algorithms/line-drawing/DDA.svelte';
   import Bresenham from './algorithms/line-drawing/Bresenham.svelte';
   import Scaling from './algorithms/2d-transformations/Scaling.svelte';
+  import Translation from './algorithms/2d-transformations/Translation.svelte';
 
   const dispatch = createEventDispatcher();
   const changePage = (p) => dispatch('message', { page: p });
@@ -31,7 +32,7 @@
       <button on:click={() => changePage(Scaling)}>
         Scaling
       </button>
-      <button on:click={() => alert("Not Implemented.")}>
+      <button on:click={() => changePage(Translation)}>
         Translation
       </button>
     </div>
