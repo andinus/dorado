@@ -23,13 +23,13 @@
     points = points.filter(item => item.id !== Number(id));
   }
 
-  let pointsArray = {x: [], y: []};
-  let translatedPointsArray = {x: [], y: []};
+  
 
   function translatePoints() {
     // Reset values.
-    pointsArray = {x: [], y: []};
-    translatedPointsArray = {x: [], y: []}
+  let pointsArray = {x: [], y: []};
+  let translatedPointsArray = {x: [], y: []};
+
 
     // Store the points in a matrix like array.
     for (const point of points) {
