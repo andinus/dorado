@@ -32,7 +32,7 @@
   }
 
   function solve() {
-    let scale_mat = [[scale_factor.x, 0], [0, scale_factor.y]];
+    const scale_mat = [[scale_factor.x, 0], [0, scale_factor.y]];
 
     scaled_points = [[], []];
     // Deep copy.
