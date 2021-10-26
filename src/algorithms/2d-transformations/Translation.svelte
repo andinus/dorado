@@ -108,6 +108,24 @@
       {/each}
     </tbody>
   </table>
+  <h4>Translation Points</h4>
+  <table>
+    <thead>
+      <tr>
+       
+        <th>x</th>
+        <th>y</th>
+      </tr>
+    </thead>
+    <tbody>
+      {#each translatedPointsArray.x as _, i}
+        <tr>
+          <td>{translatedPointsArray.x[i]}</td>
+          <td>{translatedPointsArray.y[i]}</td>
+        </tr>
+      {/each}
+    </tbody>
+  </table>
 {/if}
 
 <div id="algoChart"></div>
