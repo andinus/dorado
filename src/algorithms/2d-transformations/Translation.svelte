@@ -3,8 +3,9 @@
   import Plotly from "plotly.js-basic-dist-min";
 
   let points = [];
-  let newPoint = {x: 0, y: 0};
+  let translatedPointsArray = {x: [], y: []};
 
+  let newPoint = {x: 0, y: 0};
   let translate = {x: 0, y: 0};
 
   function addPoint() {
@@ -22,7 +23,7 @@
   function deletePoint(id) {
     points = points.filter(item => item.id !== Number(id));
   }
-let translatedPointsArray = {x: [], y: []};
+
 
   function translatePoints() {
     // Reset values.
@@ -107,11 +108,11 @@ let translatedPointsArray = {x: [], y: []};
       {/each}
     </tbody>
   </table>
+
   <h4>Translation Points</h4>
   <table>
     <thead>
       <tr>
-       
         <th>x</th>
         <th>y</th>
       </tr>
