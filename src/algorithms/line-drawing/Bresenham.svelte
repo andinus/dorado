@@ -7,7 +7,6 @@
   let x0 = 0, y0 = 0, x1 = 4, y1 = 4;
   let dx, dy, step;
 
-  let x_inc, y_inc;
   let x_axis = [], y_axis = [], p_vals = [];
 
   function solve() {
@@ -83,7 +82,7 @@
 
 {#if invalidInput === true}
   <p class="note">
-    Inavlid Input: Slope must be between 0 to 1.
+    Invalid Input: Slope must be between 0 to 1.
   </p>
 {/if}
 
