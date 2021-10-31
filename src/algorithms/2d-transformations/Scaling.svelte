@@ -34,12 +34,10 @@
   function solve() {
     const scale_mat = [[scale_factor.x, 0], [0, scale_factor.y]];
 
-    scaled_points = [[], []];
+    scaled_points = [new Array(points[0].length), new Array(points[0].length)];
     // Deep copy.
     points_after_fixed = JSON.parse(JSON.stringify(points));
     for (let i = 0; i < points[0].length; i++) {
-      scaled_points[0].push(0);
-      scaled_points[1].push(0);
 
       points_after_fixed[0][i] -= fixed_x;
       points_after_fixed[1][i] -= fixed_y;
