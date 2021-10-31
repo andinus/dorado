@@ -78,7 +78,7 @@
 </form>
 
 <hr>
-<h3>Solution:</h3>
+<h3>Solution</h3>
 
 {#if invalidInput === true}
   <p class="note">

@@ -68,7 +68,7 @@
 </form>
 
 <hr>
-<h3>Solution:</h3>
+<h3>Solution</h3>
 
 <label for="dx">dx = <code>|x1 - x0|</code>: </label>
 <input type="text" id="dx" name="dx" value={dx} disabled><br>
